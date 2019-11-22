@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class LoadActivity extends AppCompatActivity {
 
@@ -14,10 +15,12 @@ public class LoadActivity extends AppCompatActivity {
     int ingredients;
     int orderItems;
     int round;
-    String loadCodeStr;
-    int loadCodeInt;
+    int loadCodeInt = 6969;
 
     EditText load;
+    TextView message;
+
+    NewLoad newGame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,17 +33,26 @@ public class LoadActivity extends AppCompatActivity {
         startActivity(newMain);
     }
 
-    public void clkBack(View view) {
+    public void clkBack(View view)
+    {
+        finish();
         backMain();
     }
 
     public void clkLoad(View view) {
         load = findViewById(R.id.etLoad);
-        loadCodeStr = load.getText().toString();
+        message = findViewById(R.id.tvMessage);
+        loadCodeInt = Integer.parseInt(load.getText().toString());
+        newGame = new NewLoad();
 
-        if(!loadCodeStr.equals(""))
-        {
-            
+        if(loadCodeInt == 6969){
+            message.setText("No Code");
+        }
+        else if(loadCodeInt > 111099 && loadCodeInt < 1000000) {
+            message.setText("6 Digit Code");
+        }
+        else {
+
         }
     }
 }
