@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     public void clkNew(View view) {
         openNew();
     }
-//Adding a random comment so maybe this works
+
     public void clkLoad(View view) {
         openLoad();
     }
