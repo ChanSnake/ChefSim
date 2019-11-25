@@ -28,12 +28,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clkLoad(View view) {
+        finish();
         openLoad();
     }
 
-    public void clkExit(View view) {
-        finish();
-        System.exit(0);
-    }
 
 }

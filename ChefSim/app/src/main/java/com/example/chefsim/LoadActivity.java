@@ -52,7 +52,6 @@ public class LoadActivity extends AppCompatActivity {
             message.setText("6 Digit Code");
         }
         else {
-
         }
     }
 }

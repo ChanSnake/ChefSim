@@ -4,4 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameActivity"/>
+    android:background="@color/colorPrimary"
+    tools:context=".GameActivity">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="730dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button17"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button18"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:text="Button" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
