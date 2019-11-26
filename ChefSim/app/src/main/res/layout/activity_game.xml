@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/background"
     tools:context=".GameActivity">
 
     <LinearLayout
@@ -92,8 +92,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="150dp"
-        android:layout_height="500dp"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,61 +105,83 @@
             android:id="@+id/button31"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:background="@drawable/bun"
+            android:text="Bun"
+            android:textSize="10dp" />
 
         <Button
             android:id="@+id/button32"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="30dp"
+            android:background="@drawable/tomato"
+            android:text="Tomato"
+            android:textSize="10dp" />
 
         <Button
             android:id="@+id/button33"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="25dp"
+            android:background="@drawable/bacon"
+            android:text="Bacon"
+            android:textSize="10dp" />
 
         <Button
             android:id="@+id/button34"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="40dp"
+            android:background="@drawable/patty"
+            android:text="Patty"
+            android:textSize="10dp" />
 
         <Button
             android:id="@+id/button35"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="30dp"
+            android:background="@drawable/lettuce"
+            android:text="Lettuce"
+            android:textSize="10dp" />
 
         <Button
             android:id="@+id/button36"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="20dp"
+            android:background="@drawable/pickles"
+            android:text="Pickles"
+            android:textSize="10dp" />
 
         <Button
             android:id="@+id/button37"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="15dp"
+            android:background="@drawable/ketchup"
+            android:text="Ketchup"
+            android:textSize="10dp" />
 
         <Button
             android:id="@+id/button38"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="15dp"
+            android:background="@drawable/mustard"
+            android:text="Mustard"
+            android:textSize="10dp" />
 
         <Button
             android:id="@+id/button39"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="40dp"
+            android:background="@drawable/bun"
+            android:text="Bun"
+            android:textSize="10dp" />
 
-        <Button
-            android:id="@+id/butPlate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:background="@drawable/plate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
