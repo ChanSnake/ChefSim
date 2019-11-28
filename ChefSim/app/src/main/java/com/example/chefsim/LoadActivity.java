@@ -36,6 +36,11 @@ public class LoadActivity extends AppCompatActivity {
         startActivity(newMain);
     }
 
+    public void newGame(){
+        Intent newGame = new Intent(this, GameActivity.class);
+        startActivity(newGame);
+    }
+
     public void clkBack(View view)
     {
         finish();
@@ -78,6 +83,8 @@ public class LoadActivity extends AppCompatActivity {
                 System.out.println("round" + round);
                 newGame = new NewLoad();
                 newGame.set(speed, customers, ingredients, orderItems, round);
+                finish();
+                newGame();
             }
         }
     }

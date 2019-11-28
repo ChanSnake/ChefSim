@@ -28,6 +28,11 @@ public class NewActivity extends AppCompatActivity {
         startActivity(newMain);
     }
 
+    public void newGame(){
+        Intent newGame = new Intent(this, GameActivity.class);
+        startActivity(newGame);
+    }
+
     public void clkBack(View view)
     {
         finish();
@@ -41,6 +46,8 @@ public class NewActivity extends AppCompatActivity {
         orderItems = 2;
         round = 1;
         newGame.set(speed, customers, ingredients, orderItems, round);
+        finish();
+        newGame();
     }
 
     public void clkNormal(View view) {
@@ -50,6 +57,8 @@ public class NewActivity extends AppCompatActivity {
         orderItems = 5;
         round = 1;
         newGame.set(speed, customers, ingredients, orderItems, round);
+        finish();
+        newGame();
     }
 
     public void clkHard(View view) {
@@ -59,5 +68,7 @@ public class NewActivity extends AppCompatActivity {
         orderItems = 8;
         round = 1;
         newGame.set(speed, customers, ingredients, orderItems, round);
+        finish();
+        newGame();
     }
 }

@@ -4,11 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+
 public class GameActivity extends AppCompatActivity {
+
+    int speed;
+    int customers;
+    int ingredients;
+    int orderItems;
+    int round;
+    int loadCodeInt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
     }
 }
