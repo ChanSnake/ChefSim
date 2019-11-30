@@ -719,6 +719,7 @@ id button3
 id button5
 id button6
 id button7
+id button8
 id buttonPanel
 id center
 id center_horizontal
@@ -825,7 +826,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
 id textView2
-id textView3
 id time
 id title
 id titleDividerNoCustom
@@ -833,6 +833,8 @@ id title_template
 id top
 id topPanel
 id tvMessage
+id tvRound
+id tvTime
 id uniform
 id up
 id useLogo

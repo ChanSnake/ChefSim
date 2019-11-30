@@ -11,7 +11,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="100dp"
         android:layout_height="730dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,64 +19,73 @@
         <Button
             android:id="@+id/butBun"
             android:layout_width="100dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@drawable/rounded"
+            android:onClick="clkBun"
             android:text="Bun" />
 
         <Button
             android:id="@+id/butPatty"
             android:layout_width="100dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@drawable/rounded"
+            android:onClick="clkPatty"
             android:text="Patty" />
 
         <Button
             android:id="@+id/butBacon"
             android:layout_width="100dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@drawable/rounded"
+            android:onClick="clkBacon"
             android:text="Bacon" />
 
         <Button
             android:id="@+id/butTomato"
             android:layout_width="100dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@drawable/rounded"
+            android:onClick="clkTomato"
             android:text="Tomato" />
 
         <Button
             android:id="@+id/butLettuce"
             android:layout_width="100dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@drawable/rounded"
+            android:onClick="clkLettuce"
             android:text="Lettuce" />
 
         <Button
             android:id="@+id/butPickles"
             android:layout_width="100dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@drawable/rounded"
+            android:onClick="clkPickles"
             android:text="Pickles" />
 
         <Button
             android:id="@+id/butKetchup"
             android:layout_width="100dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@drawable/rounded"
+            android:onClick="clkKetchup"
             android:text="Ketchup" />
 
         <Button
             android:id="@+id/butMustard"
             android:layout_width="100dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@drawable/rounded"
+            android:onClick="clkMustard"
             android:text="Mustard" />
 
         <Button
             android:id="@+id/butCheese"
             android:layout_width="100dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@drawable/rounded"
+            android:onClick="clkCheese"
             android:text="Cheese" />
 
 
@@ -87,14 +96,18 @@
         android:layout_width="300dp"
         android:layout_height="150dp"
         android:layout_marginTop="50dp"
+        android:background="@drawable/roundedred"
         android:ems="10"
+        android:enabled="false"
+        android:fontFamily="sans-serif-condensed-light"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="146dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:orientation="vertical"
@@ -106,7 +119,7 @@
         <Button
             android:id="@+id/butBurger9"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@drawable/bun"
             android:text="Bun"
             android:textSize="10dp" />
@@ -188,16 +201,46 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvRound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/roundedred"
         android:fontFamily="sans-serif-condensed-light"
-        android:text=" Round 1 "
+        android:text=" Round - 1 "
         android:textColor="@color/colorSecondary"
         android:textSize="30dp"
-        android:background="@drawable/roundedred"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/roundedred"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text=" Time - 1:30 "
+        android:textColor="@color/colorSecondary"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="520dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etOrder">
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:onClick="clkDeliver"
+            android:text="Deliver Order" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
