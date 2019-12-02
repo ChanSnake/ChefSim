@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
         Intent LoadAct = new Intent(this, LoadActivity.class);
         startActivity(LoadAct);
     }
+    public void openHow(){
+        Intent HowAct = new Intent(this, HowActivity.class);
+        startActivity(HowAct);
+    }
 
     public void clkNew(View view) {
         openNew();
@@ -33,4 +37,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void clkHow(View view) {
+        finish();
+        openHow();
+    }
 }

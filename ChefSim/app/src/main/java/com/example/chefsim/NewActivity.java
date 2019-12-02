@@ -13,6 +13,7 @@ public class NewActivity extends AppCompatActivity {
     int ingredients;
     int orderItems;
     int round;
+    int loadCodeInt;
 
     NewLoad newGame;
 
@@ -45,9 +46,12 @@ public class NewActivity extends AppCompatActivity {
         ingredients = 2;
         orderItems = 2;
         round = 1;
+        loadCodeInt = 222201;
         newGame.set(speed, customers, ingredients, orderItems, round);
+        Intent myIntent = new Intent(NewActivity.this, GameActivity.class);
+        myIntent.putExtra("int", loadCodeInt);
+        startActivity(myIntent);
         finish();
-        newGame();
     }
 
     public void clkNormal(View view) {
@@ -56,9 +60,12 @@ public class NewActivity extends AppCompatActivity {
         ingredients = 5;
         orderItems = 5;
         round = 1;
+        loadCodeInt = 555501;
         newGame.set(speed, customers, ingredients, orderItems, round);
+        Intent myIntent = new Intent(NewActivity.this, GameActivity.class);
+        myIntent.putExtra("int", loadCodeInt);
+        startActivity(myIntent);
         finish();
-        newGame();
     }
 
     public void clkHard(View view) {
@@ -67,8 +74,11 @@ public class NewActivity extends AppCompatActivity {
         ingredients = 8;
         orderItems = 8;
         round = 1;
+        loadCodeInt = 888801;
         newGame.set(speed, customers, ingredients, orderItems, round);
-        finish();
+        Intent myIntent = new Intent(NewActivity.this, GameActivity.class);
+        myIntent.putExtra("int", loadCodeInt);
+        startActivity(myIntent);
         newGame();
     }
 }

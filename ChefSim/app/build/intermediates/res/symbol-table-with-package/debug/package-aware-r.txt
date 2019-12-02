@@ -692,6 +692,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id butBack
 id butBacon
 id butBun
 id butBurger1
@@ -704,11 +705,14 @@ id butBurger7
 id butBurger8
 id butBurger9
 id butCheese
+id butCopy
+id butDeliver
 id butKetchup
 id butLettuce
 id butLoad
 id butMustard
 id butNew
+id butNext
 id butPatty
 id butPickles
 id butPlate
@@ -716,10 +720,10 @@ id butTomato
 id button
 id button2
 id button3
+id button4
 id button5
 id button6
 id button7
-id button8
 id buttonPanel
 id center
 id center_horizontal
@@ -765,6 +769,7 @@ id left
 id line1
 id line3
 id linearLayout
+id linearLayout2
 id listMode
 id list_item
 id message
@@ -875,6 +880,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_game
+layout activity_how
 layout activity_load
 layout activity_main
 layout activity_new

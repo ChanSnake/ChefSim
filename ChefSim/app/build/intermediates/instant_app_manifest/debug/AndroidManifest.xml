@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.chefsim.HowActivity" />
         <activity android:name="com.example.chefsim.GameActivity" />
         <activity android:name="com.example.chefsim.LoadActivity" />
         <activity android:name="com.example.chefsim.NewActivity" />

@@ -23,7 +23,7 @@
         android:id="@+id/butNew"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/rounded"
         android:onClick="clkNew"
         android:text="New"
@@ -36,7 +36,7 @@
         android:id="@+id/butLoad"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/rounded"
         android:onClick="clkLoad"
         android:text="Load"
@@ -44,5 +44,17 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/butNew" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded"
+        android:onClick="clkHow"
+        android:text="HOW TO PLAY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butLoad" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

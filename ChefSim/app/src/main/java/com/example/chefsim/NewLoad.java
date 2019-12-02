@@ -24,6 +24,12 @@ public class NewLoad {
         this.ingredients = ingredients;
         this.orderItems = orderItems;
         this.round = round;
+        System.out.println("speed " + this.speed);
+        System.out.println("customers " + this.customers);
+        System.out.println("ingredients " + this.ingredients);
+        System.out.println("orderItems " + this.orderItems);
+        System.out.println("round " + this.round);
+
     }
 
     public int getSpeed() {

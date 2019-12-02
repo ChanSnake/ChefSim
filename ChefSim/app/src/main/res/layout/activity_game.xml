@@ -121,72 +121,90 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/bun"
+            android:onClick="clkBtn9"
             android:text="Bun"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/butBurger8"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:background="@drawable/tomato"
+            android:onClick="clkBtn8"
             android:text="Tomato"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/butBurger7"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:background="@drawable/bacon"
+            android:onClick="clkBtn7"
             android:text="Bacon"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/butBurger6"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/patty"
+            android:onClick="clkBtn6"
             android:text="Patty"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/butBurger5"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:background="@drawable/lettuce"
+            android:onClick="clkBtn5"
             android:text="Lettuce"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/butBurger4"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:background="@drawable/pickles"
+            android:onClick="clkBtn4"
             android:text="Pickles"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/butBurger3"
             android:layout_width="match_parent"
             android:layout_height="15dp"
             android:background="@drawable/ketchup"
+            android:onClick="clkBtn3"
             android:text="Ketchup"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/butBurger2"
             android:layout_width="match_parent"
             android:layout_height="15dp"
             android:background="@drawable/mustard"
+            android:onClick="clkBtn2"
             android:text="Mustard"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/butBurger1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/bun"
+            android:onClick="clkBtn1"
             android:text="Bun"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
@@ -227,6 +245,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="100dp"
         android:layout_height="520dp"
         android:layout_marginTop="5dp"
@@ -235,12 +254,39 @@
         app:layout_constraintTop_toBottomOf="@+id/etOrder">
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/butDeliver"
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:background="@drawable/rounded"
             android:onClick="clkDeliver"
             android:text="Deliver Order" />
+
+        <Button
+            android:id="@+id/butNext"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:onClick="clkNext"
+            android:text="Next Round" />
+
+        <Button
+            android:id="@+id/butCopy"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded"
+            android:onClick="clkCode"
+            android:text="Copy Game Code" />
+
+        <Button
+            android:id="@+id/butBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:fontFamily="sans-serif-condensed-light"
+            android:onClick="clkBack"
+            android:text="↺"
+            android:textColor="@android:color/white"
+            android:textSize="80dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
