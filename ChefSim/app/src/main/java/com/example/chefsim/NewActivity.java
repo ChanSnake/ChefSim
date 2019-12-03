@@ -79,6 +79,6 @@ public class NewActivity extends AppCompatActivity {
         Intent myIntent = new Intent(NewActivity.this, GameActivity.class);
         myIntent.putExtra("int", loadCodeInt);
         startActivity(myIntent);
-        newGame();
+        finish();
     }
 }

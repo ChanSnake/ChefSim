@@ -33,6 +33,7 @@ public class GameActivity extends AppCompatActivity {
     String codeString;
 
     NewLoad newGame;
+    Order myOrder;
 
     EditText etOrder;
     TextView tvRound;
@@ -48,6 +49,17 @@ public class GameActivity extends AppCompatActivity {
     Button b8;
     Button b9;
 
+    String top1;
+    String top2;
+    String top3;
+    String top4;
+    String top5;
+    String top6;
+    String top7;
+    String top8;
+
+
+
     String roundString;
     String timeString;
 
@@ -60,7 +72,7 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-
+        Order myOrder = new Order();
         Burger = new ArrayList<>();
 
 
@@ -128,8 +140,7 @@ public class GameActivity extends AppCompatActivity {
 
         timeString = " Time - " + speed + " ";
         tvTime.setText(timeString);
-        Order myOrder = new Order();
-        myOrder.getRandomIngredientEasy();
+        myOrder = new Order();
 
         if(ingredients < 4)
         {
@@ -1879,6 +1890,73 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void clkDeliver(View view) {
+        System.out.println(top1 + " " + top2);
+        System.out.println(Burger.get(0) + " " + Burger.get(1));
+        if(difficulty == 1)
+        {
+            if(Burger.get(0).equals(top1) && Burger.get(1).equals(top2))
+            {
+                if(ingredients < 4)
+                {
+                    difficulty = 1;
+                    etOrder.setText(myOrder.getRandomIngredientEasy());
+                    top1 = myOrder.getTopping1();
+                    top2 = myOrder.getTopping2();
+                    top3 = myOrder.getTopping3();
+                    top4 = myOrder.getTopping4();
+                    top5 = myOrder.getTopping5();
+                    top6 = myOrder.getTopping6();
+                    top7 = myOrder.getTopping7();
+                    top8 = myOrder.getTopping8();
+                    System.out.println(top1 + " " + top2);
+                    System.out.println(Burger.get(0) + " " + Burger.get(1));
+                    System.out.println("e");
+                }
+                else if(ingredients > 3 && ingredients < 7)
+                {
+                    difficulty = 2;
+                    etOrder.setText(myOrder.getRandomIngredientMedium());
+                    top1 = myOrder.getTopping1();
+                    top2 = myOrder.getTopping2();
+                    top3 = myOrder.getTopping3();
+                    top4 = myOrder.getTopping4();
+                    top5 = myOrder.getTopping5();
+                    top6 = myOrder.getTopping6();
+                    top7 = myOrder.getTopping7();
+                    top8 = myOrder.getTopping8();
+                    System.out.println(top1 + " " + top2);
+                    System.out.println(Burger.get(0) + " " + Burger.get(1));
+                    System.out.println("m");
+                }
+                else        {
+                    difficulty = 3;
+                    etOrder.setText(myOrder.getRandomIngredientHard());
+                    top1 = myOrder.getTopping1();
+                    top2 = myOrder.getTopping2();
+                    top3 = myOrder.getTopping3();
+                    top4 = myOrder.getTopping4();
+                    top5 = myOrder.getTopping5();
+                    top6 = myOrder.getTopping6();
+                    top7 = myOrder.getTopping7();
+                    top8 = myOrder.getTopping8();
+                    System.out.println(top1 + " " + top2);
+                    System.out.println(Burger.get(0) + " " + Burger.get(1));
+                    System.out.println("h");
+                }
+            }
+            else
+            {
+
+            }
+        }
+        else if(difficulty == 2)
+        {
+
+        }
+        else if(difficulty == 3)
+        {
+
+        }
     }
 
     public void clkNext(View view) {
