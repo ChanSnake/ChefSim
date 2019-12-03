@@ -26,7 +26,7 @@ public class GameActivity extends AppCompatActivity {
     int round;
     int loadCodeInt;
     int difficulty;
-
+ int points;
     int secondsPassed = 0;
     int time;
 
@@ -72,9 +72,9 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        Order myOrder = new Order();
+        myOrder = new Order();
         Burger = new ArrayList<>();
-
+        points = 0;
 
         etOrder = findViewById(R.id.etOrder);
         tvRound = findViewById(R.id.tvRound);
@@ -138,9 +138,8 @@ public class GameActivity extends AppCompatActivity {
         roundString = " Round - " + round + " ";
         tvRound.setText(roundString);
 
-        timeString = " Time - " + speed + " ";
+        timeString = " Points - " + points + " ";
         tvTime.setText(timeString);
-        myOrder = new Order();
 
         if(ingredients < 4)
         {
@@ -1890,72 +1889,75 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void clkDeliver(View view) {
-        System.out.println(top1 + " " + top2);
-        System.out.println(Burger.get(0) + " " + Burger.get(1));
-        if(difficulty == 1)
+        if(!Burger.isEmpty())
         {
-            if(Burger.get(0).equals(top1) && Burger.get(1).equals(top2))
-            {
-                if(ingredients < 4)
-                {
+            Boolean tf = false;
+            System.out.println(Burger.get(0) + " " + Burger.get(1));
+            if (difficulty == 1) {
+                tf = myOrder.testE(Burger.get(0), Burger.get(1));
+            } else if (difficulty == 2) {
+                tf = myOrder.testM(Burger.get(0), Burger.get(1), Burger.get(2), Burger.get(3), Burger.get(4));
+            } else if (difficulty == 3) {
+                tf = myOrder.testH(Burger.get(0), Burger.get(1), Burger.get(2), Burger.get(3), Burger.get(4), Burger.get(5), Burger.get(6), Burger.get(7));
+            }
+            if (tf == false) {
+                points--;
+                timeString = " Points - " + points + " ";
+                tvTime.setText(timeString);
+                b1.setVisibility(View.GONE);
+                b2.setVisibility(View.GONE);
+                b3.setVisibility(View.GONE);
+                b4.setVisibility(View.GONE);
+                b5.setVisibility(View.GONE);
+                b6.setVisibility(View.GONE);
+                b7.setVisibility(View.GONE);
+                b8.setVisibility(View.GONE);
+                b9.setVisibility(View.GONE);
+                Burger.clear();
+
+                etOrder.setText("Messed up order!");
+                if (ingredients < 4) {
                     difficulty = 1;
                     etOrder.setText(myOrder.getRandomIngredientEasy());
-                    top1 = myOrder.getTopping1();
-                    top2 = myOrder.getTopping2();
-                    top3 = myOrder.getTopping3();
-                    top4 = myOrder.getTopping4();
-                    top5 = myOrder.getTopping5();
-                    top6 = myOrder.getTopping6();
-                    top7 = myOrder.getTopping7();
-                    top8 = myOrder.getTopping8();
-                    System.out.println(top1 + " " + top2);
-                    System.out.println(Burger.get(0) + " " + Burger.get(1));
                     System.out.println("e");
-                }
-                else if(ingredients > 3 && ingredients < 7)
-                {
+                } else if (ingredients > 3 && ingredients < 7) {
                     difficulty = 2;
                     etOrder.setText(myOrder.getRandomIngredientMedium());
-                    top1 = myOrder.getTopping1();
-                    top2 = myOrder.getTopping2();
-                    top3 = myOrder.getTopping3();
-                    top4 = myOrder.getTopping4();
-                    top5 = myOrder.getTopping5();
-                    top6 = myOrder.getTopping6();
-                    top7 = myOrder.getTopping7();
-                    top8 = myOrder.getTopping8();
-                    System.out.println(top1 + " " + top2);
-                    System.out.println(Burger.get(0) + " " + Burger.get(1));
                     System.out.println("m");
-                }
-                else        {
+                } else {
                     difficulty = 3;
                     etOrder.setText(myOrder.getRandomIngredientHard());
-                    top1 = myOrder.getTopping1();
-                    top2 = myOrder.getTopping2();
-                    top3 = myOrder.getTopping3();
-                    top4 = myOrder.getTopping4();
-                    top5 = myOrder.getTopping5();
-                    top6 = myOrder.getTopping6();
-                    top7 = myOrder.getTopping7();
-                    top8 = myOrder.getTopping8();
-                    System.out.println(top1 + " " + top2);
-                    System.out.println(Burger.get(0) + " " + Burger.get(1));
+                    System.out.println("h");
+                }
+            } else {
+                points += points*round;
+                timeString = " Points - " + points + " ";
+                tvTime.setText(timeString);
+                b1.setVisibility(View.GONE);
+                b2.setVisibility(View.GONE);
+                b3.setVisibility(View.GONE);
+                b4.setVisibility(View.GONE);
+                b5.setVisibility(View.GONE);
+                b6.setVisibility(View.GONE);
+                b7.setVisibility(View.GONE);
+                b8.setVisibility(View.GONE);
+                b9.setVisibility(View.GONE);
+                Burger.clear();
+                etOrder.setText("Good Burger!");
+                if (ingredients < 4) {
+                    difficulty = 1;
+                    etOrder.setText(myOrder.getRandomIngredientEasy());
+                    System.out.println("e");
+                } else if (ingredients > 3 && ingredients < 7) {
+                    difficulty = 2;
+                    etOrder.setText(myOrder.getRandomIngredientMedium());
+                    System.out.println("m");
+                } else {
+                    difficulty = 3;
+                    etOrder.setText(myOrder.getRandomIngredientHard());
                     System.out.println("h");
                 }
             }
-            else
-            {
-
-            }
-        }
-        else if(difficulty == 2)
-        {
-
-        }
-        else if(difficulty == 3)
-        {
-
         }
     }
 
@@ -1963,6 +1965,25 @@ public class GameActivity extends AppCompatActivity {
         if(round < 99)
         {
             round++;
+            roundString = " Round - " + round + " ";
+            tvRound.setText(roundString);
+            if(ingredients < 4)
+            {
+                difficulty = 1;
+                etOrder.setText(myOrder.getRandomIngredientEasy());
+                System.out.println("e");
+            }
+            else if(ingredients > 3 && ingredients < 7)
+            {
+                difficulty = 2;
+                etOrder.setText(myOrder.getRandomIngredientMedium());
+                System.out.println("m");
+            }
+            else        {
+                difficulty = 3;
+                etOrder.setText(myOrder.getRandomIngredientHard());
+                System.out.println("h");
+            }
         }
         else
         {
